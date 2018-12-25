@@ -25,7 +25,7 @@ In the previous Lane Finding project, the lane lines in a frame was found with t
 
 When I apply this approach to the video for this project, I get this result:
 
-Here's a [link to my video result](./test_videos/project_video_pre_full.mp4)
+Here's a [link to my video result](https://github.com/sungpily/Udacity_CarND-P2-Advanced-Lane-Lines/blob/master/test_videos/project_video_pre-full.mp4)
 
 ### Camera Calibration
 
