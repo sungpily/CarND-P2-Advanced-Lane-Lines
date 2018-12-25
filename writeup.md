@@ -1,8 +1,6 @@
 ## Project: Advanced Lane Finding
 
-### Project goals/steps
-
-**Advanced Lane Finding Project**
+### Project Goals/Steps
 
 The goals / steps of this project are the following:
 
@@ -14,6 +12,16 @@ The goals / steps of this project are the following:
 * Determine the curvature of the lane and vehicle position with respect to center.
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+
+### From Previous Projects
+
+In the previous Lane Finding project, the lane lines in a frame was found with the following steps
+
+Step 1: convert the image to gray scale
+Step 2: apply gaussian_blur to smooth the image
+Step 3: apply Canny edge detection algorithm
+Step 4: apply mask filter
+Step 5: find lines using Hough transform
 
 
 ### Camera Calibration
