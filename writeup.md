@@ -17,12 +17,15 @@ The goals / steps of this project are the following:
 
 In the previous Lane Finding project, the lane lines in a frame was found with the following steps
 
-Step 1: convert the image to gray scale
-Step 2: apply gaussian_blur to smooth the image
-Step 3: apply Canny edge detection algorithm
-Step 4: apply mask filter
-Step 5: find lines using Hough transform
+* Step 1: convert the image to gray scale
+* Step 2: apply gaussian_blur to smooth the image
+* Step 3: apply Canny edge detection algorithm
+* Step 4: apply mask filter
+* Step 5: find lines using Hough transform
 
+When I apply this approach to the video for this project, I get this result:
+
+Here's a [link to my video result](./test_videos/project_video_pre_full.mp4)
 
 ### Camera Calibration
 
