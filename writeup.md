@@ -23,7 +23,7 @@ In the previous Lane Finding project, the lane lines in a frame was found with t
 * Step 4: apply mask filter
 * Step 5: find lines using Hough transform
 
-When I apply this approach to the video for this project, I get [this result](https://github.com/sungpily/Udacity_CarND-P2-Advanced-Lane-Lines/blob/master/test_videos/project_video_pre-full.mp4). Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, see the picture below for a frame around ??. 
+When I apply this approach to the video for this project, I get [this result](./test_videos/project_video_pre-full.mp4). Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, see the picture below for a frame around ??. 
 
 ![Fig 1](https://raw.githubusercontent.com/sungpily/Udacity_CarND-P2-Advanced-Lane-Lines/master/test_images/straight_lines1.jpg)
 ![Fig 1](./test_images/straight_lines1.jpg)
