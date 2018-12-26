@@ -27,22 +27,22 @@ When I apply this approach to the video for this project, I get [this result](./
 
 Let's see if we can improve the result using more advanced algorithms.
 
-### Camera Calibration
 
-#### 1. Compute the camera matrix and distortion coefficients
+### 1. Compute the camera matrix and distortion coefficients
 
 Images formed through the camera lenses are distorted, especially around the edge of the images. This kind of distortion can be calibrated using chessboard images. Calibration means finding out the translation vector and rotation vector. Once these values are found, then the distored images can be undistorted using the precomputed translation and rotation vectors.
 
 The first step is to find out the "corner points" using `cv2.findChessboardCorners()` function. The found corner points can easily be drawn on the original image using `cv2.drawChessboardCorners()`
 ![fig](./camera_cal/calibration03_pts.jpg)
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+Then the translation and rotation vectors between object points and image points are found using `cv2.calibrateCamera()` function.
 
-I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
+### 2. Apply a distortion correction to raw images.
 
-I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
+Once the calibration parameters (translation and rotation vectors) are found, then the original images can be undistorted using `cv2.undistort()`. The following image is the undistorted version of the image above.
 
-![alt text][image1]
+![fig](./camera_cal/calibration03_und.jpg)
+
 
 ### Pipeline (single images)
 
