@@ -45,7 +45,7 @@ Once the calibration parameters (translation and rotation vectors) are found, th
 
 Video images captured by the same camera can now be undistorted using these calibration parameters. These numbers do not need to be recomputed after they are computed once.
 
-<img src="./test_images/straight_lines1.jpg" width="425"/> <img src="./test_images/straight_lines1_corn.jpg" width="425"/>
+<img src="./test_images/straight_lines1.jpg"/> <img src="./test_images/straight_lines1_corn.jpg"/>
 
 ### 3. Create a thresholded binary image.
 
