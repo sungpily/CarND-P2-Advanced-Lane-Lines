@@ -41,17 +41,16 @@ Then the translation and rotation vectors between object points and image points
 
 Once the calibration parameters (translation and rotation vectors) are found, then the original images can be undistorted using `cv2.undistort()`. The following image is the undistorted version of the image above.
 
-![fig](./camera_cal/calibration03_und.jpg)
+Original image             |  Undistorted image
+:-------------------------:|:-------------------------:
+![fig](./camera_cal/calibration03.jpg)  |  ![fig](./camera_cal/calibration03_und.jpg)
 
-Video images captured by the same camera can now be undistorted using these calibration parameters. These numbers do not need to be recomputed after they are computed once.
+Video images captured by the same camera can now be undistorted using these calibration parameters. These numbers do not need to be recomputed after they are computed once. For example, the same calibration parameters are used to undistort the following image.
 
-<img src="./test_images/straight_lines1.jpg" width="350"/> <img src="./test_images/straight_lines1_corn.jpg" width="350"/>
-
-Solarized dark             |  Solarized Ocean
+Original image             |  Undistorted image
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_corn.jpg)
 
-![fig](./test_images/straight_lines1.jpg) ![fig](./test_images/straight_lines1_corn.jpg)
 
 ### 3. Create a thresholded binary image.
 
