@@ -23,16 +23,18 @@ In the previous Lane Finding project, the lane lines in a frame was found with t
 * Step 4: apply mask filter
 * Step 5: find lines using Hough transform
 
-When I apply this approach to the video for this project, I get [this result](./test_videos/project_video_pre-full.mp4). Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, see the picture below for a frame around ??. 
-
-![Fig 1](https://raw.githubusercontent.com/sungpily/Udacity_CarND-P2-Advanced-Lane-Lines/master/test_images/straight_lines1.jpg)
-![Fig 1](./test_images/straight_lines1.jpg)
+When I apply this approach to the video for this project, I get [this result](./test_videos/project_video_pre-full.mp4). Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, frames near 20 seconds and 40 seconds.
 
 Let's see if we can improve the result using more advanced algorithms.
 
 ### Camera Calibration
 
-#### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
+#### 1. Compute the camera matrix and distortion coefficients
+
+Images formed through the camera lenses are distorted, especially around the edge of the images. This kind of distortion can be calibrated using chessboard images. Calibration means finding out the translation vector and rotation vector. Once these values are found, then the distored images can be undistorted using the precomputed translation and rotation vectors.
+
+The first step is to find out the "corner points" using `cv2.findChessboardCorners()` function. The found corner points can easily be drawn on the original image using `cv2.drawChessboardCorners()`
+![fig](./camera_cal/calibration03_pts.jpg)
 
 The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
 
