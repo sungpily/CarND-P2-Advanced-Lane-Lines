@@ -4,14 +4,14 @@
 
 The goals / steps of this project are the following:
 
-* Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-* Apply a distortion correction to raw images.
-* Use color transforms, gradients, etc., to create a thresholded binary image.
-* Apply a perspective transform to rectify binary image ("birds-eye view").
-* Detect lane pixels and fit to find the lane boundary.
-* Determine the curvature of the lane and vehicle position with respect to center.
-* Warp the detected lane boundaries back onto the original image.
-* Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+* Step 1: Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
+* Step 2: Apply a distortion correction to raw images.
+* Step 3: Use color transforms, gradients, etc., to create a thresholded binary image.
+* Step 4: Apply a perspective transform to rectify binary image ("birds-eye view").
+* Step 5: Detect lane pixels and fit to find the lane boundary.
+* Step 6: Determine the curvature of the lane and vehicle position with respect to center.
+* Step 7: Warp the detected lane boundaries back onto the original image.
+* Step 8: Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
 ### From Previous Projects
 
@@ -42,6 +42,13 @@ Then the translation and rotation vectors between object points and image points
 Once the calibration parameters (translation and rotation vectors) are found, then the original images can be undistorted using `cv2.undistort()`. The following image is the undistorted version of the image above.
 
 ![fig](./camera_cal/calibration03_und.jpg)
+
+Video images captured by the same camera can now be undistorted using these calibration parameters. These numbers do not need to be recomputed after they are computed once.
+
+<img src="./test_images/straight_lines1.jpg" width="425"/> <img src="./test_images/straight_lines1_corn.jpg" width="425"/>
+
+### 3. Create a thresholded binary image.
+
 
 
 ### Pipeline (single images)
