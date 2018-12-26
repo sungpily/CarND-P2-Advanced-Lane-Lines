@@ -49,7 +49,7 @@ Video images captured by the same camera can now be undistorted using these cali
 
 Original image             |  Undistorted image
 :-------------------------:|:-------------------------:
-![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_corn.jpg)
+![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_und.jpg)
 
 
 ### 3. Create a thresholded binary image.
