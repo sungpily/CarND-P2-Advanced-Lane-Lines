@@ -79,11 +79,15 @@ Thresholded image with source points         |  Warped image
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1_corn.jpg)  |  ![fig](./test_images/straight_lines1_warp.jpg)
 
+I can tell that the perspective transform is done reasonably well since two lane lines in the warped image appear parallel.
 
 ### Step 5. Detect lane pixels and fit to find the lane boundary
 
+The first step to detect lane pixels in the warped image is to compute histogram (using only the bottom half of the image) in x direction and find out the two x coordinates, one that has the peak value in the left half and the other that has the peak value in the right half. These x coordinates serve as the starting point to search the lane pixels from the bottom. Next, divide the y-range into n windows (9 windows in my case). The width of each window is preset value (200 pixels in my case) centered around the a-priori x coordinates. These windows are shown in the figure below with green lines. Find out the non-zero pixels within the window and compute the average x-coordinates of these pixels. This becomes the a-priori x coordinates for the next window. Keep doing this for all the windows and collect x- and y-coordinates of all non-zero pixels within the windows. Pixels for left line and right line should be treated separately. Next, compute the fitting curve as the second order polynomial using `np.polyfit()` function using the collected x- and y-coordinates. The fitting curves for left and right lines are shown below with red lines.
 
-
+Warped image         |  Warped image with fitting curves
+:-------------------------:|:-------------------------:
+![fig](./test_images/straight_lines1_warp.jpg)  |  ![fig](./test_images/straight_lines1_warp_wind.jpg)
 
 
 ### Putting everything together
