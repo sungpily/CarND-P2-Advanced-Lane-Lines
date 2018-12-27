@@ -28,7 +28,7 @@ When I apply this approach to the video for this project, I get [this result](./
 Let's see if we can improve the result using more advanced algorithms.
 
 
-### 1. Compute the camera matrix and distortion coefficients
+### Step 1. Compute the camera matrix and distortion coefficients
 
 Images formed through the camera lenses are distorted, especially around the edge of the images. This kind of distortion can be calibrated using chessboard images. Calibration means finding out the translation vector and rotation vector. Once these values are found, then the distored images can be undistorted using the precomputed translation and rotation vectors.
 
@@ -37,7 +37,7 @@ The first step is to find out the "corner points" using `cv2.findChessboardCorne
 
 Then the translation and rotation vectors between object points and image points are found using `cv2.calibrateCamera()` function.
 
-### 2. Apply a distortion correction to raw images.
+### Step 2. Apply a distortion correction to raw images.
 
 Once the calibration parameters (translation and rotation vectors) are found, then the original images can be undistorted using `cv2.undistort()`. The following image is the undistorted version of the image above.
 
@@ -52,7 +52,40 @@ Original image             |  Undistorted image
 ![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_und.jpg)
 
 
-### 3. Create a thresholded binary image.
+### Step 3. Create a thresholded binary image.
+
+Once the frame image is undistorted, then the next step is to identify lane line pixels. I basically used two approaches: applying threshold to gradient and color. Pixels identified by two approaches are combined together to form a thresholded binary image.
+
+#### Thresholding gradient
+
+Gradient is a rate of change in color space. Canny edge detection uses the same idea but we dont have have fine control about what happens inside Canny edge detection function of OpneCV library. Instead, I used `cv2.Sobel()` function to compute first order gradient in x-direction. The solbel function is applied on L channel of HLS color space. L channel is used since lane line pixels can be identified relatively easily even if environment such as pavement color changes. x-direction gradient is used since lane line is usually in vertical direction. Threshold value of (20, 100) is used.
+
+#### Thresholding color
+
+S channel is used for thresholding color for the same reason that lane line pixels can be identified relatively easily even if environment such as pavement color changes. Threshold value of (170, 255) is used.
+
+Example of thresholded binary image is shown below. For the reader, pixels identified by gradient threshold is shown in green color while pixels identified by color threshold is shown in red color.
+
+Original image             |  Thresholded image
+:-------------------------:|:-------------------------:
+![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_thres.jpg)
+
+
+### Step 4. Apply a perspective transform
+
+
+
+
+### Putting everything together
+
+
+### Discussion
+
+Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+
+Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+
+
 
 
 
