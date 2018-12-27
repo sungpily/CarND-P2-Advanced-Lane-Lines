@@ -44,10 +44,8 @@ Images formed through the camera lenses are distorted, especially around the edg
 The first step is to find out the "corner points" using `cv2.findChessboardCorners()` function. The found corner points can easily be drawn on the original image using `cv2.drawChessboardCorners()`
 
 <p align="center">
-    <img src="./camera_cal/calibration03_pts.jpg" width="350">
+    <img src="./camera_cal/calibration03_pts.jpg" width="500">
 </p>
-
-![fig](./camera_cal/calibration03_pts.jpg)
 
 Then the translation and rotation vectors between object points and image points are found using `cv2.calibrateCamera()` function.
 
@@ -154,3 +152,6 @@ Compared to the lane line detection video using the algorithm from the previous 
 
 * The advanced algorith employed in this project seems working fine most of the time. But at around 22 seconds of the video, it is noticed that lane lines shows erroneous behaviour. My theory about this error is: the pavement color changes and thresholded binary image does not include enough information for the following steps. Looking at other color channels and experimenting with different threshold values may eliminate this error.
 
+* This project came with "challenge_video.mp4". When I processed the "challenge_video.mp4" with the pipeline developed during this project, several deficiencies of the algorithm were found:
+
+    * This video has many lines on the pavement that are parallel with the lane lines. Even the initial fitted line converged to the wrong lines. Since the initial fitted line was wrong, all the lane lines identified by the alrogithm in the subsequent frame were wrong. 
