@@ -42,6 +42,11 @@ Let's see if we can improve the result using more advanced algorithms.
 Images formed through the camera lenses are distorted, especially around the edge of the images. This kind of distortion can be calibrated using chessboard images. Calibration means finding out the translation vector and rotation vector. Once these values are found, then the distored images can be undistorted using the precomputed translation and rotation vectors.
 
 The first step is to find out the "corner points" using `cv2.findChessboardCorners()` function. The found corner points can easily be drawn on the original image using `cv2.drawChessboardCorners()`
+
+<p align="center">
+    <img src="./camera_cal/calibration03_pts.jpg" width="350">
+</p>
+
 ![fig](./camera_cal/calibration03_pts.jpg)
 
 Then the translation and rotation vectors between object points and image points are found using `cv2.calibrateCamera()` function.
