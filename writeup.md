@@ -104,19 +104,21 @@ The algorith described above is done on the first frame. Once the fitting curve 
 
 Let's assume that the fitting curve in the warped image is represented as 
 
-![eq](https://latex.codecogs.com/gif.latex?x%20%3D%20f%28y%29%20%3D%20Ay%5E2%20&plus;%20By%20&plus;%20C)
-
 <p align="center">
 <img src="https://latex.codecogs.com/gif.latex?x%20%3D%20f%28y%29%20%3D%20Ay%5E2%20&plus;%20By%20&plus;%20C">
 </p>
 
 The radius of the curvature is computed with
 
-![eq](https://latex.codecogs.com/gif.latex?R_%7Bcurve%7D%20%3D%20%5Cfrac%7B%281%20&plus;%20%282%20A%20y%20&plus;%20B%29%5E2%29%29%5E%7B3/2%7D%7D%7B%5Cleft%20%7C%202%20A%20%5Cright%20%7C%7D)
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?R_%7Bcurve%7D%20%3D%20%5Cfrac%7B%281%20&plus;%20%282%20A%20y%20&plus;%20B%29%5E2%29%29%5E%7B3/2%7D%7D%7B%5Cleft%20%7C%202%20A%20%5Cright%20%7C%7D">
+</p>
 
 Now, x and y in the f(y) function are in warped image scale. To find out the radius of curvature in the real world, x and y need to be scaled using scale factor mx and my in unit of \[meter / pixel\]. mx = 3.7 / 690 and my = 30 / 720 was used. Now, the x and y in real world (xr and yr) can be represented with
 
-![eq](https://latex.codecogs.com/gif.latex?x_r%20%3D%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7B%7Bm_y%7D%5E2%7D%20%5Cright%20%29%20A%20%7By_r%7D%5E2%20&plus;%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7Bm_y%7D%20%5Cright%20%29%20B%20y_r%20&plus;%20m_x%20C)
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?x_r%20%3D%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7B%7Bm_y%7D%5E2%7D%20%5Cright%20%29%20A%20%7By_r%7D%5E2%20&plus;%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7Bm_y%7D%20%5Cright%20%29%20B%20y_r%20&plus;%20m_x%20C">
+</p>
 
 I used these scaled coefficients to find out the radius of curvature in the real world.
 
