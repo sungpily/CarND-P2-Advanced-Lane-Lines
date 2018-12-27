@@ -54,7 +54,7 @@ Original image             |  Undistorted image
 
 ### Step 3. Create a thresholded binary image.
 
-Once the frame image is undistorted, then the next step is to identify lane line pixels. I basically used two approaches: applying threshold to gradient and color. Pixels identified by two approaches are combined together to form a thresholded binary image.
+Once the frame image is undistorted, then the next step is to convert the image to thresholded binary image. I basically used two approaches: applying threshold to gradient and color. Pixels identified by two approaches are combined together to form a thresholded binary image.
 
 #### Thresholding gradient
 
@@ -66,7 +66,7 @@ S channel is used for thresholding color for the same reason that lane line pixe
 
 Example of thresholded binary image is shown below. For the reader, pixels identified by gradient threshold is shown in green color while pixels identified by color threshold is shown in red color.
 
-Original image after calibration             |  Thresholded image
+Undistorted image             |  Thresholded image
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1_und.jpg)  |  ![fig](./test_images/straight_lines1_thres.jpg)
 
@@ -74,6 +74,9 @@ Original image after calibration             |  Thresholded image
 ### Step 4. Apply a perspective transform
 
 
+Thresholded image with source points         |  Warped image
+:-------------------------:|:-------------------------:
+![fig](./test_images/straight_lines1_corn.jpg)  |  ![fig](./test_images/straight_lines1_warp.jpg)
 
 
 ### Putting everything together
