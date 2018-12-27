@@ -27,7 +27,7 @@ You can find out the resulting video by clicking the link below. Overall, the re
 
 ---
 
-[Video](./test_videos/project_video_pre-full.mp4)
+-> [Video](./test_videos/project_video_pre-full.mp4) <-
 
 ---
 
@@ -95,15 +95,17 @@ Warped image         |  Warped image with fitting curves
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1_warp.jpg)  |  ![fig](./test_images/straight_lines1_warp_wind.jpg)
 
-The algorith described above is done on the first frame. Once the fitting curve is found, then we don't need to use the n-windows approach to find out the lane pixels. We can simply search the vicinity of the fitting curve and find out the lane pixels at once. This approach is faster than n-windows search and allows more stable results since the information from the previous frame is used for the current frame.
+The algorith described above is done on the first frame. Once the fitting curve is found, then we don't need to use the n-windows approach to find out the lane pixels. We can simply search the vicinity of the fitting curve and find out the lane pixels at once. This approach is faster than n-windows search and allows more stable results since the information from the previous frame is used for the current frame. The default search area suggested by the class note was 100 pixels. But this resulted in very unstable and erroneous lane detection for the project video. I changed the value from 100 pixels to 30 pixels and the result was satisfactory.
 
 ### Step 6. Determine the curvature of the lane and vehicle position with respect to center
+
+
 
 ### Putting everything together
 
 ---
 
-[Video](./test_videos/project_video_out_updated_full.mp4)
+-> [Video](./test_videos/project_video_out_updated_full.mp4) <-
 
 ---
 
