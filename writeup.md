@@ -11,7 +11,8 @@ The goals / steps of this project are the following:
 * Step 5: Detect lane pixels and fit to find the lane boundary.
 * Step 6: Determine the curvature of the lane and vehicle position with respect to center.
 * Step 7: Warp the detected lane boundaries back onto the original image.
-* Step 8: Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+
+Create a pipeline using steps from 2 through 7.
 
 ### Result using algorithm from the previous project
 
@@ -105,6 +106,10 @@ Let's assume that the fitting curve in the warped image is represented as
 
 ![eq](https://latex.codecogs.com/gif.latex?x%20%3D%20f%28y%29%20%3D%20Ay%5E2%20&plus;%20By%20&plus;%20C)
 
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?x%20%3D%20f%28y%29%20%3D%20Ay%5E2%20&plus;%20By%20&plus;%20C">
+</p>
+
 The radius of the curvature is computed with
 
 ![eq](https://latex.codecogs.com/gif.latex?R_%7Bcurve%7D%20%3D%20%5Cfrac%7B%281%20&plus;%20%282%20A%20y%20&plus;%20B%29%5E2%29%29%5E%7B3/2%7D%7D%7B%5Cleft%20%7C%202%20A%20%5Cright%20%7C%7D)
@@ -114,6 +119,11 @@ Now, x and y in the f(y) function are in warped image scale. To find out the rad
 ![eq](https://latex.codecogs.com/gif.latex?x_r%20%3D%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7B%7Bm_y%7D%5E2%7D%20%5Cright%20%29%20A%20%7By_r%7D%5E2%20&plus;%20%5Cleft%20%28%20%5Cfrac%7Bm_x%7D%7Bm_y%7D%20%5Cright%20%29%20B%20y_r%20&plus;%20m_x%20C)
 
 I used these scaled coefficients to find out the radius of curvature in the real world.
+
+### Step 7. Warp the detected lane boundaries back onto the original image
+
+
+
 
 ### Putting everything together
 
