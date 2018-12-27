@@ -127,6 +127,13 @@ I used these scaled coefficients to find out the radius of curvature in the real
 
 
 
+
+Original image             |  Image with lane boundaries
+:-------------------------:|:-------------------------:
+![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_final.jpg)
+
+
+
 ### Putting everything together
 
 ---
