@@ -27,7 +27,7 @@ You can find out the resulting video by clicking the link below. Overall, the re
 
 ---
 
--> [Video](./test_videos/project_video_pre-full.mp4) <-
+->[Video](./test_videos/project_video_pre-full.mp4)<-
 
 ---
 
@@ -105,7 +105,7 @@ The algorith described above is done on the first frame. Once the fitting curve 
 
 ---
 
--> [Video](./test_videos/project_video_out_updated_full.mp4) <-
+->[Video](./test_videos/project_video_out_updated_full.mp4)<-
 
 ---
 
