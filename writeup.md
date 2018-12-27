@@ -68,7 +68,7 @@ Example of thresholded binary image is shown below. For the reader, pixels ident
 
 Original image after calibration             |  Thresholded image
 :-------------------------:|:-------------------------:
-![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_thres.jpg)
+![fig](./test_images/straight_lines1_und.jpg)  |  ![fig](./test_images/straight_lines1_thres.jpg)
 
 
 ### Step 4. Apply a perspective transform
