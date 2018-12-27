@@ -104,6 +104,7 @@ The algorith described above is done on the first frame. Once the fitting curve 
 Let's assume that the fitting curve in the warped image is represented as 
 
 ![eq](http://www.HostMath.com/Show.aspx?Code=x%20%3D%20f(y)%20%3D%20Ay%5E2%20%2B%20By%20%2B%20C)
+![eq](https://latex.codecogs.com/gif.latex?x%20%3D%20f%28y%29%20%3D%20Ay%5E2%20&plus;%20By%20&plus;%20C)
 
 <p>
     \[x = f(y) = Ay^2 + By + C\]
