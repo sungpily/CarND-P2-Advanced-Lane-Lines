@@ -147,6 +147,5 @@ Compared to the lane line detection video using the algorithm from the previous 
 
 ### Discussion
 
-Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+* The advanced algorith employed in this project seems working fine most of the time. But at around 22 seconds of the video, it is noticed that lane lines shows erroneous behaviour. My theory about this error is: the pavement color changes and thresholded binary image does not include enough information for the following steps. Looking at other color channels and experimenting with different threshold values may eliminate this error.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
