@@ -73,10 +73,17 @@ Undistorted image             |  Thresholded image
 
 ### Step 4. Apply a perspective transform
 
+The next step is to do perspective transform to obtain the warped image. In warped image (bird's eye view), it is easier to find out the pixels for lane lines and compute curvature. The perspective trnasform is done by providing the function `cv2.getPerspectiveTransform()` with source points and destination points. Then the function returns the matrix M that we can use to perform perspective transform on each frame image. The image below shows the manually selected source points and the warped image.
 
 Thresholded image with source points         |  Warped image
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1_corn.jpg)  |  ![fig](./test_images/straight_lines1_warp.jpg)
+
+
+### Step 5. Detect lane pixels and fit to find the lane boundary
+
+
+
 
 
 ### Putting everything together
