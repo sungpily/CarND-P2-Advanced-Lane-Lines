@@ -124,14 +124,11 @@ I used these scaled coefficients to find out the radius of curvature in the real
 
 ### Step 7. Warp the detected lane boundaries back onto the original image
 
-
-
-
+Next, the detected lane boundaries are marked with green color. This is done using `cv2.fillPoly()` function. The list of points going into this function is computed using the fitted curve determined in step 5. Once the lane boundaries are marked with green color on the warped image, this needs to be transformed back to the original image. I used the same function `cv2.warpPerspective()` that was used to create the warped image. But this time, instead of M matrix, I used the invese of the M matrix since the direction of the transformation is backward this time. The inverse of the M matrix is obtained using `np.linalg.inv()` function. The original image and the image with lane boundary are shown below.
 
 Original image             |  Image with lane boundaries
 :-------------------------:|:-------------------------:
 ![fig](./test_images/straight_lines1.jpg)  |  ![fig](./test_images/straight_lines1_final.jpg)
-
 
 
 ### Putting everything together
