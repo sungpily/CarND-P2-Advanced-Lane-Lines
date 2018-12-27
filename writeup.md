@@ -124,7 +124,7 @@ I used these scaled coefficients to find out the radius of curvature in the real
 
 ### Step 7. Warp the detected lane boundaries back onto the original image
 
-Next, the detected lane boundaries are marked with green color. This is done using `cv2.fillPoly()` function. The list of points going into this function is computed using the fitted curve determined in step 5. Once the lane boundaries are marked with green color on the warped image, this needs to be transformed back to the original image. I used the same function `cv2.warpPerspective()` that was used to create the warped image. But this time, instead of M matrix, I used the invese of the M matrix since the direction of the transformation is backward this time. The inverse of the M matrix is obtained using `np.linalg.inv()` function. The original image and the image with lane boundary are shown below.
+Next, the detected lane boundaries are marked with green color. This is done using `cv2.fillPoly()` function. The list of points going into this function is computed using the fitted curve determined in step 5. Once the lane boundaries are marked with green color on the warped image, this needs to be transformed back to the original image. I used the same function `cv2.warpPerspective()` that was used to create the warped image. But this time, instead of M matrix, I used the invese of the M matrix since the direction of the transformation is backward this time. The inverse of the M matrix is obtained using `np.linalg.inv()` function. The original image and the image with lane boundaries are shown below.
 
 Original image             |  Image with lane boundaries
 :-------------------------:|:-------------------------:
@@ -132,6 +132,8 @@ Original image             |  Image with lane boundaries
 
 
 ### Putting everything together
+
+Now a pipeline with all the step above is written and the original project video is processed. The computed radius of curvature as well as the position of the car from the lane center is also displayed on the frame image. You can review the result by downloading the video below:
 
 ---
 
@@ -141,6 +143,7 @@ Original image             |  Image with lane boundaries
 
 ---
 
+Compared to the lane line detection video using the algorithm from the previous project (which you can watch from the link at the top), current result shows much better performance to find out lane lines. It is much smoother and finds the lane lines correctly most of the time.
 
 ### Discussion
 
