@@ -105,7 +105,9 @@ The algorith described above is done on the first frame. Once the fitting curve 
 
 ---
 
-->[Video](./test_videos/project_video_out_updated_full.mp4)<-
+<p align="center">
+[Video](./test_videos/project_video_out_updated_full.mp4)
+</p>
 
 ---
 
