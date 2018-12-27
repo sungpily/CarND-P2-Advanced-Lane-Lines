@@ -23,9 +23,13 @@ In the previous Lane Finding project, the lane lines in a frame was found with t
 * Step 4: apply mask filter
 * Step 5: find lines using Hough transform
 
-You can find out the resulting video by clicking the link below. [this result](./test_videos/project_video_pre-full.mp4). Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, frames near 20 seconds and 40 seconds.
+You can find out the resulting video by clicking the link below. Overall, the result is very jittery and even fails to follow the real lane lines when the road color changes or there are shadow on the road. For example, frames near 20 seconds and 40 seconds.
 
-[this result](./test_videos/project_video_pre-full.mp4)
+---
+
+[Video](./test_videos/project_video_pre-full.mp4
+
+---
 
 Let's see if we can improve the result using more advanced algorithms.
 
