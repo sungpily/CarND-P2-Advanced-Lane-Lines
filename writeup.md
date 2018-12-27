@@ -106,11 +106,11 @@ The algorith described above is done on the first frame. Once the fitting curve 
 ---
 
 <p align="center">
-[Video](./test_videos/project_video_out_updated_full.mp4)
+    <a href="./test_videos/project_video_out_updated_full.mp4">Video</a>
 </p>
 
 ---
-
+[Video](./test_videos/project_video_out_updated_full.mp4)
 
 ### Discussion
 
