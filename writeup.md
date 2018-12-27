@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 * Step 7: Warp the detected lane boundaries back onto the original image.
 * Step 8: Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-### From Previous Projects
+### Result using algorithm from the previous project
 
 In the previous Lane Finding project, the lane lines in a frame was found with the following steps
 
@@ -27,7 +27,9 @@ You can find out the resulting video by clicking the link below. Overall, the re
 
 ---
 
-->[Video](./test_videos/project_video_pre-full.mp4)<-
+<p align="center">
+    <a href="./test_videos/project_video_pre-full.mp4">Video</a>
+</p>
 
 ---
 
@@ -110,7 +112,7 @@ The algorith described above is done on the first frame. Once the fitting curve 
 </p>
 
 ---
-[Video](./test_videos/project_video_out_updated_full.mp4)
+
 
 ### Discussion
 
