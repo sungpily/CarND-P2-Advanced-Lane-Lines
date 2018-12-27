@@ -105,6 +105,11 @@ Let's assume that the fitting curve in the warped image is represented as
 
 ![eq](http://www.HostMath.com/Show.aspx?Code=x%20%3D%20f(y)%20%3D%20Ay%5E2%20%2B%20By%20%2B%20C)
 
+<p>
+    \[x = f(y) = Ay^2 + By + C\]
+    <script type="text/javascript" src="http://www.hostmath.com/Math/MathJax.js?config=OK"></script>
+</p>
+
 f(y) = Ay\*\*2 + By + C. The radius of the curvature is computed as 
 
 ### Putting everything together
