@@ -101,7 +101,11 @@ The algorith described above is done on the first frame. Once the fitting curve 
 
 ### Step 6. Determine the curvature of the lane and vehicle position with respect to center
 
-Assuming that the fitting curve in the warped image is represented as f(y) = Ay\*\*2 + By + C
+Let's assume that the fitting curve in the warped image is represented as 
+
+![eq](http://www.HostMath.com/Show.aspx?Code=x%20%3D%20f(y)%20%3D%20Ay%5E2%20%2B%20By%20%2B%20C)
+
+f(y) = Ay\*\*2 + By + C. The radius of the curvature is computed as 
 
 ### Putting everything together
 
